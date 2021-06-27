@@ -1,0 +1,10 @@
+﻿<krpano>
+
+	<!-- Version 1.17 Design -->
+
+	<skin_settings
+	               design_text_css="color:#FFFFFF; font-family:Arial; font-weight:bold;"
+	               design_text_shadow="1"
+	               />
+
+</krpano>

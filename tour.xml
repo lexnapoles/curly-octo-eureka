@@ -1,0 +1,51 @@
+﻿<krpano version="1.20.9" title="">
+
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings 
+	             
+	        
+	  
+	               design_text_css="color:#FFFFFF; font-family:TimesNewRoman;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+
+
+	
+	<scene name="" title="l4urenf0ng@gmail.com" onstart="" thumburl="panos/Island.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Island.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Island.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640" />
+		</image>
+    
+  
+<layer name="infotext" type="text" background="false" css="color:#FFFFFF;font-weight:bold;font-size:16px;font:TimesNewRoman" textshadow="1.0" enabled="false" align="top" y="10%" html.mouse="Lauren Fong"  />
+  
+<layer name="infotes" type="text" background="false" css="color:#FFFFFF;font-weight:bold;font-size:16px;font:TimesNewRoman" textshadow="1.0" enabled="false" align="top" y="15%" html.mouse="This website is under construction"  />
+    
+  <layer name="infotex" type="text" background="false" css="color:#FFFFFF;font-weight:bold;font-size:16px;font:TimesNewRoman" textshadow="1.0" enabled="false" align="top" y="20%" html.mouse="l4urenf0ng@gmail.com"  />
+
+	</scene>
+
+
+</krpano>
